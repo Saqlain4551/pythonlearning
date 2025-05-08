@@ -1,6 +1,6 @@
 a= 5   #a is the integer
 
-b= "hello word" # b is the string
+b= "saqlain" # b is the string
 
 c= 7.1 # c is the float
 
