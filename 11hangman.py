@@ -1,45 +1,41 @@
 import random
+import hangman_stages
 
 word_list = ["apple", "snowfall", "kashmir"]
 lives = 6
 chosen_word = random.choice(word_list)
 
-print(chosen_word)  # Step 1: Random word from the list
+print("Welcome to Hangman!")
 
-# Step 2: Display "_" for each letter
-display = []
-for i in range(len(chosen_word)):
-    display += '_'
-print(display)
+#  Display underscores for each letter
+display = ["_"] * len(chosen_word)
+print("Current word:", " ".join(display))
 
 game_over = False
 
-
 while not game_over:
-    guessed_letter = input("Guess the letter: ").lower()
-
-
-    for position in range(len(chosen_word)):
-        letter = chosen_word[position]
-        if letter == guessed_letter:
-            display[position] = guessed_letter
-
-    print(display)
+    guessed_letter = input("Guess a letter: ").lower()
 
     
-    if guessed_letter not in chosen_word:
+    if guessed_letter in chosen_word:
+        for position in range(len(chosen_word)):
+            if chosen_word[position] == guessed_letter:
+                display[position] = guessed_letter
+        print("Good guess!")
+    else:
         lives -= 1
-        print("Wrong guess! Lives left:")
+        print(f"Wrong guess! Lives left: {lives}")
         if lives == 0:
             game_over = True
-            print("You lose!!:", chosen_word)
+            print("BAD LUCK! You lose !! ")
 
     
-    if '_' not in display:
+    print("Current word:", " ".join(display))
+
+    
+    print(hangman_stages.stages[lives])
+
+    
+    if "_" not in display:
         game_over = True
-        print("You win!!")
-
-
-
-
-
+        print(" CONGRATULATION! You win the game hope you enjoy it !!")
