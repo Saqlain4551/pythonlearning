@@ -62,7 +62,7 @@ print(shuffle_list([1, 2, 3, 4, 5]))
 def unique_random_numbers(): # gen random number 
     return random.sample(range(10), 7)   # he select betwen 1 to 10 only 7 unique random number 
 
-print(unique_random_numbers())  # [3,8,4,5,2,0,9]
+print(unique_random_numbers())  # [3,8,4,5,2,0,7,6]
 
 
 
