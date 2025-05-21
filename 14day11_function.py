@@ -21,16 +21,14 @@ print(add_all_nums(1, "two", 3))
 
 # conert C to F 
 def convert_celsius_to_fahrenheit(celsius):
-    if not isinstance(celsius, (int, float)):
-        return "Error: Input must be a number (int or float)."
-    
-    fahrenheit = (celsius * 9/5) + 32
-    return fahrenheit
+    if isinstance(celsius, (int, float)):
+        fahrenheit = (celsius * 9/5) + 32
+        return fahrenheit
+    else:
+        return "Please enter a number"
 
-print(convert_celsius_to_fahrenheit(0))      
-print(convert_celsius_to_fahrenheit(100))    
-print(convert_celsius_to_fahrenheit("cold")) 
-
+print(convert_celsius_to_fahrenheit(0))    # Output: 32.0
+print(convert_celsius_to_fahrenheit(100))  # Output: 212.0
 
 def check_season(Month):
     seasons = {
