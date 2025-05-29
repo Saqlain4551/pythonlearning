@@ -1,0 +1,51 @@
+# EXERCISE 1 OF DATE AND TIME 
+from datetime import datetime, date
+
+now= datetime.now()
+print(now)   # 2025-05-29 15:40:18.068518
+
+day= now.day
+
+month= now.month
+year= now.year
+hour= now.hour
+minute= now.min
+second= now.second
+timestamp= now.timestamp() # 1748513944.303343
+
+print(day , month , year , hour , minute , second , )  #29 5 2025 15 0001-01-01 00:00:00 4
+print('timestamp:', timestamp)
+print(f'{day}/{month}/{year} , {hour}:{min}:{second}') #29/5/2025 , 15:0001-01-01 00:00:00:49
+
+
+now= datetime.now()
+print(now)
+
+t= now.strftime("%m/%d/%Y, %H:%M:%S")
+print ('time:', t) # time: 05/29/2025, 15:53:46
+
+date_string= "29 May 2025"
+print('date_string:', date_string) # date_string: 29 May 2025
+
+now= date(year=2025, month= 5, day= 29)
+new_year= date(year=2026, month=1, day=1)
+
+time_left_for_new_year= new_year - now
+print('time left for new year:', time_left_for_new_year) # time left for new year: 217 days, 0:00:00
+
+t1 = datetime(year = 2025, month = 5, day = 29, hour = 0, minute = 59, second = 0)
+t2 = datetime(year = 2026, month = 1, day = 1, hour = 0, minute = 0, second = 0)
+diff = t2 - t1
+print('Time left for new year:', diff) #Time left for new year: 216 days, 23:01:00
+
+now= date(year=2025, month= 5, day= 29)
+past= date(year= 1970, month=1, day=1)
+time_diff_of_past_from_now= now - past
+print('time diff of past from now:', time_diff_of_past_from_now) #time diff of past from now: 20237 days, 0:00:00
+
+birthdate= datetime(2006, 2, 28)
+now= datetime.now()
+
+age = now - birthdate
+
+print(age) # 7030 days, 16:23:42.309661
