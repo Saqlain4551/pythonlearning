@@ -1,0 +1,12 @@
+# EXERCISE OF EXCEPTIONAL HANDLING
+
+names = ['Finland', 'Sweden', 'Norway', 'Denmark', 'Iceland', 'Estonia', 'Russia']
+
+# Unpacking
+nordic_countries, es, ru = names[:5], names[5], names[6]
+
+print("Nordic Countries:", nordic_countries)
+print("Estonia:", es)
+print("Russia:", ru)   # Nordic Countries: ['Finland', 'Sweden', 'Norway', 'Denmark', 'Iceland']
+                       #  Estonia: Estonia
+                        #  Russia: Russia         
