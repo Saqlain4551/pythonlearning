@@ -1,0 +1,104 @@
+# PYTHON TYPE ERROR EXAMPLES
+# syntax error 
+
+print "hello world" 
+
+#python day15_python_typ_error
+#   File "C:\Chapter 2\day15_python_typ_error", line 2
+#     print "hello world"
+#     ^^^^^^^^^^^^^^^^^^^
+# SyntaxError: Missing parentheses in call to 'print'. Did you mean print(...)?
+
+
+# Name error 
+
+print(address)
+
+# python day15_python_typ_error
+# Traceback (most recent call last):
+#   File "C:\Chapter 2\day15_python_typ_error", line 13, in <module>
+#     print(address)
+#           ^^^^^^^
+# NameError: name 'address' is not defined
+
+# Index error 
+
+num= [1 ,2 ,3 ,4 ,5]
+num[5]
+
+# python day15_python_typ_error
+# Traceback (most recent call last):
+#   File "C:\Chapter 2\day15_python_typ_error", line 25, in <module>
+#     num[5]
+#     ~~~^^^
+# IndexError: list index out of range
+
+# Module error 
+
+import maths   # we use extra 's' 
+
+# python day15_python_typ_error
+# Traceback (most recent call last):
+#   File "C:\Chapter 2\day15_python_typ_error", line 36, in <module>
+#     import maths
+# ModuleNotFoundError: No module named 'maths'
+
+# Attribute error 
+
+import math 
+math.PI         # correct one is pi
+
+# python day15_python_typ_error
+# Traceback (most recent call last):
+#   File "C:\Chapter 2\day15_python_typ_error", line 47, in <module>
+#     math.PI
+# AttributeError: module 'math' has no attribute 'PI'
+
+# Key error 
+
+details= {'name': 'saqlain', 'age': 19 , 'country': 'India'}
+print (details['name'])
+print(details[county])     # typo mistake 
+
+# python day15_python_typ_error
+# saqlain
+# Traceback (most recent call last):
+#   File "C:\Chapter 2\day15_python_typ_error", line 59, in <module>
+#     print(details[county])
+#                   ^^^^^^
+# NameError: name 'county' is not defined
+
+# Type error 
+
+4 + '3'      
+
+# python day15_python_typ_error
+# Traceback (most recent call last):
+#   File "C:\Chapter 2\day15_python_typ_error", line 71, in <module>
+#     4 + '3'
+#     ~~^~~~~
+# TypeError: unsupported operand type(s) for +: 'int' and 'str'
+
+# import error
+
+from math import power    # not power pow
+
+#  python day15_python_typ_error
+# Traceback (most recent call last):
+#   File "C:\Chapter 2\day15_python_typ_error", line 82, in <module>
+#     from math import power    # not power pow
+#     ^^^^^^^^^^^^^^^^^^^^^^
+# ImportError: cannot import name 'power' from 'math' (unknown location)
+
+# Value error 
+
+int ('12a')  # correct one is 1/0
+
+# python day15_python_typ_error
+# Traceback (most recent call last):
+#   File "C:\Chapter 2\day15_python_typ_error", line 93, in <module>
+#     int ('12a')
+#     ~~~~^^^^^^^
+# ValueError: invalid literal for int() with base 10: '12a'
+
+
