@@ -1,3 +1,4 @@
+print("welcome to my python project!!")
 import random
 
 def number_guessing_game():
