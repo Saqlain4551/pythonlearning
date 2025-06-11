@@ -1,5 +1,5 @@
 import os
-import sys
+import sys  
 
 # Set environment variable before QApplication
 os.environ["QTWEBENGINE_PROFILE_PATH"] = os.path.join(os.getcwd(), "browser_cache")
